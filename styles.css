@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.70), rgba(0,0,0,0.70)), url("/images/background.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.logo {
+    height: 100;
+    cursor: pointer;
+}
+
+.navbar {
+    width: 85%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.navbar ul li {
+
+    list-style: none;
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    font-family: 'Comfortaa', cursive;
+    color: rgba(252, 247, 241, 0.911);
+}
+
+.navbar ul li::after {
+    content: '';
+    height: 3px;
+    width: 0;
+    background:aqua;
+    position: absolute;
+    left: 0%;
+    bottom: -9px;
+    transition: 0.4s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+}
+
+.content {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    transition: translateY(-50%);
+    text-align: center;
+    color: white;
+
+}
+
+.title {
+    font-size: 70px;
+    font-weight: bold;
+    line-height: 100px;
+    font-family: 'sans-serif';
+    height: 100px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    
+
+}
+
+.content p {
+    margin: 20px auto;
+    font-weight: 100;
+    font-family: 'Comfortaa', cursive;
+    line-height: 25px;
+}
+
+button {
+    padding:15px 25px;
+    margin: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight:  bold ;
+    font-family:'Montserrat', sans-serif;
+    border: 2px solid aqua;
+    cursor: pointer;
+    background: linear-gradient(to left, transparent 50%, aqua 50%);
+    background-size: 200%;
+    background-position: right;
+    transition: background-position 0.5s;
+}
+
+button:hover {
+    background-position: left;
+    color: black;
+}
+
+.slider {
+    color: aqua;
+    margin-left: 15px;
+    box-sizing: border-box;
+    animation: slider 6s linear infinite;
+}
+
+@keyframes slider {
+    0%{ margin-top: -400px; }
+    5%{ margin-top: -200px; }
+    30%{ margin-top: -200px; }
+    35%{ margin-top: 0px; }
+    65%{ margin-top: 0px; }
+    70%{ margin-top: 200px; }
+    100%{ margin-top: 200px; }
+}
